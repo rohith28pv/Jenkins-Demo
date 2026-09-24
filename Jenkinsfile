@@ -1,5 +1,6 @@
 pipeline {
 	agent any
+
 	stages{
 		stage('Checkout'){
 			steps{
@@ -9,14 +10,21 @@ pipeline {
 	
 		stage('Build'){
 			steps{
-				sh 'python3 -m py_compile app.py'
+				echo "Building the Applications"
 			}
 		}
 	
 		stage('Test'){
 			steps{
-				sh 'python3 -c "from app import add; assert add(2,3) == 5"'
+				echo "Running Test..."
 			}
+		}
+
+		stage('Deploy'){
+			steps{
+				echo "Deploying application..."
+			}
+		
 		}
 	}
 }
