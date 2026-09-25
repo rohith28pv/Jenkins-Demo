@@ -416,3 +416,4 @@ webroot: /home/rohith/.jenkins/war
 2026-09-25 10:29:42.311+0000 [id=280]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
 2026-09-25 10:29:42.509+0000 [id=281]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
 2026-09-25 10:29:42.509+0000 [id=85]	INFO	h.m.UpdateCenter$CompleteBatchJob#run: Completed installation of 92 plugins in 5 min 47 sec
+2026-09-25 10:36:59.484+0000 [id=285]	INFO	o.j.p.g.w.s.DefaultPushGHEventSubscriber#onEvent: Received PushEvent for https://github.com/rohith28pv/Jenkins-Demo from 140.82.115.114 ⇒ https://f075-51-158-99-35.ngrok-free.app:8080/github-webhook/
