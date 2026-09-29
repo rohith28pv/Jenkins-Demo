@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Backend Install and Test') {
+            steps {
+                dir('backend') {
+                    sh 'npm install'
+                    sh 'node --check server.js'
+                }
+            }
+        }
+
+        stage('Frontend Install and Build') {
+            steps {
+                dir('frontend') {
+                    sh 'npm install'
+                    sh 'npm run build'
+                }
+            }
+        }
+
+        stage('Build Successful') {
+            steps {
+                echo 'Angular frontend and Node.js backend checks completed!'
+            }
+        }
+    }
+}

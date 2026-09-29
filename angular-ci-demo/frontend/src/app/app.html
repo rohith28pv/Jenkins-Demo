@@ -1,0 +1,27 @@
+<main class="container">
+  <section class="card">
+    <p class="tag">FULL STACK CI/CD LAB</p>
+
+    <h1>Angular + Jenkins</h1>
+
+    <p class="subtitle">
+      Angular frontend connected to a Node.js backend.
+    </p>
+
+    <button (click)="callBackend()" [disabled]="loading">
+      {{ loading ? 'Connecting...' : 'Call Backend API' }}
+    </button>
+
+    <div class="result" *ngIf="message">
+      <p class="success">API Response</p>
+      <h2>{{ message }}</h2>
+      <p>Service: {{ service }}</p>
+    </div>
+
+    <p class="error" *ngIf="error">{{ error }}</p>
+
+    <footer>
+      Angular · Node.js · Express · Jenkins
+    </footer>
+  </section>
+</main>
