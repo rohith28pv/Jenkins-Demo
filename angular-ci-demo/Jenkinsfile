@@ -14,7 +14,7 @@ pipeline {
 
         stage('Backend Install and Test') {
             steps {
-                dir('backend') {
+                dir('angular-ci-demo/backend') {
                     sh 'npm install'
                     sh 'node --check server.js'
                 }
@@ -23,7 +23,7 @@ pipeline {
 
         stage('Frontend Install and Build') {
             steps {
-                dir('frontend') {
+                dir('angular-ci-demo/frontend') {
                     sh 'npm install'
                     sh 'npm run build'
                 }
